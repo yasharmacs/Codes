@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        int n=str.length();
+        char prev = str.charAt(0);
+        char curr = str.charAt(0);
+        String ans = "";
+        int count = 1;
+        for (int i = 1; i < n; i++) {
+            curr = str.charAt(i);
+            if (prev == curr) {
+                count++;
+            } else {
+                ans += String.valueOf(prev) + count;
+                prev = curr;
+                count = 1;
+            }
+        }
+         ans += String.valueOf(curr) + count;
+         System.out.print(ans);
+    }
+}
+        
+        
+            
