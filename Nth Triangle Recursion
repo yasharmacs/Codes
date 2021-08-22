@@ -1,0 +1,20 @@
+import java.util.*;
+public class Main {
+    public static int fibN(int n){
+         //base case
+        if(n==1){
+            return n;
+        }
+        int ans=fibN(n-1);
+        int myans=ans+n;
+        return myans;
+        }
+    public static void main(String args[]) {
+        // Your Code Here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.print(fibN(n));
+
+
+    }
+}
