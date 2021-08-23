@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main {
+    public static void findindex(int[] arr,int i, int find){
+        //base class
+        if(i==arr.length) return;
+        if(arr[i]==find){
+            System.out.print(i+" ");
+        }     
+        findindex(arr,i+1,find);     
+
+    }
+
+    public static void main(String args[]) {
+        // Your Code Here
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int find=sc.nextInt();
+
+        findindex(arr,0,find);
+
+
+    }
+}
