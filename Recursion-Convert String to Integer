@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main {
+
+    public static int sti(String n,int size){
+        int s=0;
+        if(size==1){
+             s=Integer.parseInt(n); 
+            return s; 
+        }
+
+
+        int recans=sti(n,size-1);;
+        int myans=recans+s;
+        return myans;
+
+    }
+
+
+    public static void main(String args[]) {
+        // Your Code Here
+        Scanner sc=new Scanner(System.in);
+        String in=sc.nextLine();
+        int size=in.length();
+        System.out.print(sti(in,size));
+    }
+}
