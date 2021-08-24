@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main {
+
+    public static void paren(String s, int n,int open, int close){
+         if(open==n && close==n){
+            System.out.println(s);
+            return;
+        }
+        
+        if(open>close){
+            paren(s+')',n,open,close+1);
+        }
+        if(open<n){
+            paren(s+'(',n,open+1,close);
+        }
+       
+
+    }
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        
+        paren("",n,0,0);
+
+    }
+}
