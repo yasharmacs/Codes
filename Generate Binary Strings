@@ -1,0 +1,34 @@
+import java.util.*;
+public class Main {
+     public static void ans(String s,String out){
+
+         if(s.length()==0){
+             System.out.print(out+" ");
+             return;
+         }
+
+       char c=s.charAt(0);
+       String leftoverstring=s.substring(1);
+       if(c=='0' || c=='1'){
+           ans(leftoverstring,out+c);
+       }
+       else{
+           ans(leftoverstring,out+'0');
+           ans(leftoverstring,out+'1');
+       }
+     }
+
+
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+        int test=sc.nextInt();
+        while(test-- >0){
+           String s=sc.next();
+           String out="";
+           ans(s,out);
+           System.out.println();
+        }
+        
+
+    }
+}
