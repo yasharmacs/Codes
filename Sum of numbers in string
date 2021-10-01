@@ -1,0 +1,31 @@
+/*
+Learning:- use of long parse 
+*/
+
+
+import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    int testcases=sc.nextInt();
+    while(testcases-->0){
+        String check=sc.next();
+        long sum=0L;
+        String leftover="0";
+
+        for(int i=0;i<check.length();i++){
+            if(check.charAt(i)>='0' && check.charAt(i)<='9'){
+                leftover+=check.charAt(i);
+            }
+                else{
+                    sum+=Long.parseLong(leftover); //agar ye use nahi lia toh exception dega
+                    leftover="0";
+                 }
+            }
+            sum += Long.parseLong(leftover);
+    	System.out.println(sum);
+        }
+        
+    }
+}
