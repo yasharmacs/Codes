@@ -1,7 +1,9 @@
+//we are using al again and again that's why we are doing backTracking.
 class Solution {
     List<List<Integer>> fal=new ArrayList<>();
     
     public List<List<Integer>> permute(int[] nums) {
+        
         List<Integer> al=new ArrayList<>();
         helper(al,nums,0,new boolean[nums.length]);
         return fal;
